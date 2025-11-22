@@ -1,0 +1,11 @@
+[
+  {
+    "id": "SQLI_ERROR_001",
+    "type": "sqli",
+    "desc": "SQLi error-based placeholder - demo only.",
+    "example_safe": "<SQLI_ERROR_001_PAYLOAD>",
+    "notes": "Use in lab only.",
+    "danger_level": "high",
+    "test_env_required": true
+  }
+]

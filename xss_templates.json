@@ -1,9 +1,20 @@
-{
-  "id": "XSS_REFLECTED_001",
-  "type": "xss",
-  "desc": "Reflected XSS example — placeholder for demonstration only.",
-  "example_safe": "<XSS_REFLECTED_001_PAYLOAD>",
-  "notes": "Use only in authorised lab. Shows where payload would be placed (query param).",
-  "danger_level": "high"
-}
-
+[
+  {
+    "id": "XSS_REFLECTED_001",
+    "type": "xss",
+    "desc": "Reflected XSS placeholder - for demo only.",
+    "example_safe": "<XSS_REFLECTED_001_PAYLOAD>",
+    "notes": "Place payload into query parameter for demonstration.",
+    "danger_level": "high",
+    "test_env_required": true
+  },
+  {
+    "id": "XSS_DOM_001",
+    "type": "xss",
+    "desc": "DOM XSS placeholder - for demo only.",
+    "example_safe": "<XSS_DOM_001_PAYLOAD>",
+    "notes": "Used to illustrate DOM insertion points.",
+    "danger_level": "high",
+    "test_env_required": true
+  }
+]

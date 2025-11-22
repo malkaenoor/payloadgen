@@ -1,0 +1,11 @@
+[
+  {
+    "id": "CMDINJ_LINUX_001",
+    "type": "cmdinj",
+    "desc": "Command injection placeholder - demo only.",
+    "example_safe": "<CMDINJ_LINUX_001_PAYLOAD>",
+    "notes": "Illustrative only, do not execute on production.",
+    "danger_level": "high",
+    "test_env_required": true
+  }
+]

