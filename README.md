@@ -49,6 +49,33 @@ Lists SQL Injection payloads and returns payload by ID.
 Encodes payloads using Base64, URL encoding, or HTML escaping.
 
 ---
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/malkaenoor/payloadgen.git
+cd payloadgen/src
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+🖥️ CLI Usage
+📌 List Payloads
+bash
+Copy code
+python3 cli.py list --type xss
+python3 cli.py list --type sqli
+⚙️ Generate Payload
+python3 cli.py generate --type xss
+
+🔁 Mutate Payload
+bash
+Copy code
+python3 cli.py mutate run --method reverse --payload "<script>alert(1)</script>"
+
+🔏 Encode Payload
+bash
+Copy code
+python3 cli.py encode --method base64 --payload "admin"
 
 ## 🛠 Usage Example
 
