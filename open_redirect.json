@@ -1,0 +1,8 @@
+[
+    {
+        "id": "REDIRECT_SAFE_001",
+        "title": "Open Redirect Test (Safe)",
+        "description": "Simulated redirect payload.",
+        "payload": "REDIRECT_SIMULATED(https://example.com)"
+    }
+]

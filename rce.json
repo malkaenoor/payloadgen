@@ -1,0 +1,8 @@
+[
+    {
+        "id": "RCE_SAFE_001",
+        "title": "RCE Payload Placeholder",
+        "description": "Educational placeholder for RCE module.",
+        "payload": "COMMAND_INJECTION_SIMULATED(<input>)"
+    }
+]

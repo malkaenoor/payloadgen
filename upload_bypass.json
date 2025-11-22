@@ -1,0 +1,8 @@
+[
+    {
+        "id": "UPLOAD_SAFE_001",
+        "title": "Upload Bypass Placeholder",
+        "description": "Educational placeholder for file upload bypass.",
+        "payload": "UPLOAD_BYPASS_SIMULATED(file.jpg)"
+    }
+]
