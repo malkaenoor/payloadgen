@@ -1,4 +1,4 @@
-# payloadgen 
+# Payload Generator Project
 
 A modular and extensible security payload generator designed to produce **XSS**, **SQL Injection**, and **encoded payloads** for testing web applications. The project includes a clean registry-based architecture, independent payload generators, and multiple encoding utilities.
 
