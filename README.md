@@ -59,14 +59,44 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 🖥️ CLI Usage
-📌 List Payloads
-bash
-Copy code
-python3 cli.py list --id xss
-python3 cli.py list --id sqli
-⚙️ Generate Payload
-python src/cli.py generate --id XSS_REFLECTED_001
-python src/cli.py generate --id SQLI_BOOLEAN_002 
+# List available payload IDs
+python3 cli.py list --type xss
+python3 cli.py list --type sqli
+
+# Generate a single payload by ID (returns placeholder string)
+python3 cli.py generate --id SQLI_UNION_001
+python3 cli.py generate --id XSS_REFLECTED_001
+
+# Generate by category (XSS or SQLi)
+python3 cli.py generate --type xss --category reflected
+python3 cli.py generate --type sqli --category union
+
+# Encode payloads
+python3 cli.py encode --method base64 --payload "<PLACEHOLDER_PAYLOAD>"
+python3 cli.py encode --method url --payload "<PLACEHOLDER_PAYLOAD>"
+
+# Mutate payloads (case flip, reverse, unicode, random-insert)
+python3 cli.py mutate run --method case-flip --payload "<PLACEHOLDER_PAYLOAD>"
+python3 cli.py mutate run --method reverse --payload "ABC123"
+
+ # pull and run DVWA container (isolated lab)
+docker pull vulnerables/web-dvwa
+docker run --rm -d --name dvwa -p 8080:80 vulnerables/web-dvwa
+
+# open DVWA in browser: http://localhost:8080
+# login (default DVWA credential or setup per image instructions)
+# example: get a reflected XSS placeholder
+python3 cli.py generate --id XSS_REFLECTED_001
+# or a union SQLi placeholder
+python3 cli.py generate --id SQLI_UNION_001
+# export generated payloads
+python3 cli.py generate --type sqli --category union --mode normal --export txt --out union_payloads.txt
+# export payloads to JSON/TXT (if implemented)
+python3 cli.py generate --type sqli --category union --export json --out union_payloads.json
+
+# generate a simple PDF report (example script uses ReportLab)
+python3 generate_report.py --out project_report.pdf
+
 
 🔁 Mutate Payload
 bash
