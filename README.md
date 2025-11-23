@@ -66,6 +66,7 @@ python3 cli.py list --type xss
 python3 cli.py list --type sqli
 ⚙️ Generate Payload
 python src/cli.py generate --id XSS_REFLECTED_001
+python src/cli.py generate --id SQLI_BOOLEAN_002 
 
 🔁 Mutate Payload
 bash
