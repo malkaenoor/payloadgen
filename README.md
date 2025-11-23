@@ -62,8 +62,8 @@ pip install -r requirements.txt
 📌 List Payloads
 bash
 Copy code
-python3 cli.py list --type xss
-python3 cli.py list --type sqli
+python3 cli.py list --id xss
+python3 cli.py list --id sqli
 ⚙️ Generate Payload
 python src/cli.py generate --id XSS_REFLECTED_001
 python src/cli.py generate --id SQLI_BOOLEAN_002 
