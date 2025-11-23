@@ -65,7 +65,7 @@ Copy code
 python3 cli.py list --type xss
 python3 cli.py list --type sqli
 ⚙️ Generate Payload
-python3 cli.py generate --type xss
+python src/cli.py generate --id XSS_REFLECTED_001
 
 🔁 Mutate Payload
 bash
