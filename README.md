@@ -64,8 +64,12 @@ python3 cli.py list --type xss
 python3 cli.py list --type sqli
 
 # Generate a single payload by ID (returns placeholder string)
-python3 cli.py generate --id SQLI_UNION_001
-python3 cli.py generate --id XSS_REFLECTED_001
+python3 cli.py list --type xss
+python3 cli.py list --type sqli
+python3 cli.py generate --type xss --id x37
+python3 cli.py generate --type sqli --id s48
+
+
 
 # Generate by category (XSS or SQLi)
 python3 cli.py generate --type xss --category reflected
