@@ -82,31 +82,29 @@ python3 cli.py mutate-sqli --type sqli --method comment --payload "' OR 1=1 --"
 
  # pull and run DVWA container (isolated lab)
 docker pull vulnerables/web-dvwa
-docker run --rm -d --name dvwa -p 8080:80 vulnerables/web-dvwa
+
+docker run -d \
+  --name dvwa \
+  -p 8080:80 \
+  vulnerables/web-dvwa
+
 
 # open DVWA in browser: http://localhost:8080
 # login (default DVWA credential or setup per image instructions)
-# example: get a reflected XSS placeholder
-python3 cli.py generate --id XSS_REFLECTED_001
-# or a union SQLi placeholder
-python3 cli.py generate --id SQLI_UNION_001
-# export generated payloads
-python3 cli.py generate --type sqli --category union --mode normal --export txt --out union_payloads.txt
-# export payloads to JSON/TXT (if implemented)
-python3 cli.py generate --type sqli --category union --export json --out union_payloads.json
+start testing ............
 
-# generate a simple PDF report (example script uses ReportLab)
-python3 generate_report.py --out project_report.pdf
+# EXPORT COMMANDS
+python3 cli.py export --type sqli --export txt --out sqli_payloads.txt
+python3 cli.py export --type xss --export json --out xss_payloads.json
+
+#PDF REPORT
+python3 generate_report.py
 
 
 🔁 Mutate Payload
-bash
-Copy code
 python3 cli.py mutate run --method reverse --payload "<script>alert(1)</script>"
 
 🔏 Encode Payload
-bash
-Copy code
 python3 cli.py encode --method base64 --payload "admin"
 
 ## 🛠 Usage Example
