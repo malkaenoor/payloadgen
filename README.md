@@ -20,6 +20,8 @@ It supports **numeric payload generation**, **mutation**, **encoding**, and **ex
 ## 📦 Installation
 
 Clone the repository:
+git clone git@github.com:malkaenoor/payloadgen.git
+cd payloadgen
 
 ```bash
 Create a Python virtual environment:
@@ -82,5 +84,3 @@ python3 cli.py export --type xss --export json --out xss_payloads.json
 6️⃣ Generate PDF report
 python3 generate_report.py --out project_report.pdf
 
-git clone git@github.com:malkaenoor/payloadgen.git
-cd payloadgen
