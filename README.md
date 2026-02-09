@@ -53,8 +53,7 @@ python3 cli.py generate --type xss --id 1
 python3 cli.py generate --type sqli --id 5
 3️⃣ Mutate payloads
 # XSS mutation
-python3 cli.py mutate --method case-flip --payload "<script>alert(1)</script>"
-
+python3 cli.py mutate run --method case-flip --payload "<script>alert(1)</script>"
 # SQLi mutation
 python3 cli.py mutate-sqli --type sqli --method comment --payload "' OR 1=1 --"
 Available SQLi mutation methods:
