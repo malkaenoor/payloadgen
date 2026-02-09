@@ -23,7 +23,7 @@ Clone the repository:
 
 ```bash
 Create a Python virtual environment:
-
+cd payloadgen/src
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
