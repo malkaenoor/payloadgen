@@ -1,20 +1,23 @@
 import json
-import os
 
 class SQLiGenerator:
     def __init__(self):
-        base_dir = os.path.dirname(__file__)
-        path = os.path.join(base_dir, "sqli_templates.json")
-
-        with open(path, "r") as f:
+        with open("sqli_templates.json", "r") as f:
             self.payloads = json.load(f)
 
     def list_ids(self):
-        return [item["id"] for item in self.payloads]
+        return [p["id"] for p in self.payloads]
 
-    def generate_by_number(self, number):
-        pid = f"SQLI_{number}"
-        for item in self.payloads:
-            if item["id"] == pid:
-                return item["payload"]
+    def generate_by_id(self, pid):
+        for p in self.payloads:
+            if p["id"] == pid:
+                return p.get("example_safe", "")
         return None
+
+    def generate_by_number(self, num):
+        if 1 <= num <= len(self.payloads):
+            return self.payloads[num - 1].get("example_safe", "")
+        return None
+
+    def get_all_payloads(self):
+        return self.payloads

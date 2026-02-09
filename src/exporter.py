@@ -1,12 +1,12 @@
-import json
-
 class Exporter:
-
-    def to_txt(self, payloads, outfile):
-        with open(outfile, "w") as f:
+    def to_txt(self, payloads, out_file):
+        with open(out_file, "w") as f:
             for p in payloads:
-                f.write(p + "\n")
+                # write only payload string
+                payload_str = p.get("example_safe", "")
+                f.write(payload_str + "\n")
 
-    def to_json(self, payloads, outfile):
-        with open(outfile, "w") as f:
-            json.dump(payloads, f, indent=2)
+    def to_json(self, payloads, out_file):
+        import json
+        with open(out_file, "w") as f:
+            json.dump(payloads, f, indent=4)
