@@ -64,10 +64,8 @@ python3 cli.py list --type xss
 python3 cli.py list --type sqli
 
 # Generate a single payload by ID (returns placeholder string)
-python3 cli.py list --type xss
-python3 cli.py list --type sqli
-python3 cli.py generate --type xss --id x37
-python3 cli.py generate --type sqli --id s48
+python3 cli.py generate --type xss --id 7
+python3 cli.py generate --type sqli --id s8
 
 
 
@@ -76,11 +74,11 @@ python3 cli.py generate --type xss --category reflected
 python3 cli.py generate --type sqli --category union
 
 # Encode payloads
-python3 cli.py encode --method base64 --payload "<PLACEHOLDER_PAYLOAD>"
+python3 cli.py encode --method base64 --payload "<script>alert(1)</script>"
 python3 cli.py encode --method url --payload "<PLACEHOLDER_PAYLOAD>"
 
 # Mutate payloads (case flip, reverse, unicode, random-insert)
-python3 cli.py mutate run --method case-flip --payload "<PLACEHOLDER_PAYLOAD>"
+python3 cli.py mutate run --method case-flip --payload "<script>alert(1)</script>"
 python3 cli.py mutate run --method reverse --payload "ABC123"
 
  # pull and run DVWA container (isolated lab)
