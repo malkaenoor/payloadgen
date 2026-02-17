@@ -37,7 +37,7 @@ def list(type):
 # --------------------------------------------------
 @cli.command()
 @click.option("--type", required=True, type=click.Choice(["xss", "sqli"]))
-@click.option("--id", type=int, required=True)
+@click.option("--id", type=str, required=True)
 def generate(type, id):
     if type == "xss":
         g = XSSGenerator()
